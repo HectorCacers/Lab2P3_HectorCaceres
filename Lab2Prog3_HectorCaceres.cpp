@@ -21,8 +21,8 @@ int main(int argc, char** argv)
 	int b = 0;
 	double m = 0;
 	//////////////////////////////////////
-	int dia1=0, mes1=0, ano1=0;
-	int dia2=0, mes2=0, ano2=0;
+	int dia1 = 0, mes1 = 0, ano1 = 0;
+	int dia2 = 0, mes2 = 0, ano2 = 0;
 	int diferencia = 0, dias = 0;
 	int r = 0;
 	//////////////////////////////////////
@@ -129,14 +129,117 @@ int main(int argc, char** argv)
 
 			break;
 		case 2:
+			cout << "EJERCICIO (2)" << endl;
+			cout << "-----------------" << endl;
+			cout << "\n" << endl;
+
+			cout << "VALOR DE YMAX : ";
+			cin >> ymax;
+			cout << "VALOR DE XMAX : ";
+			cin >> xmax;
+
+			cout << "\n\n" << endl;
+
+			if (ymax > 0 & xmax > 0 & ymax >= xmax) {
+				cout << "! DATOS CORRECTO !" << endl;
+
+				cout << "\n\n" << endl;
+
+				cout << "DATOS : --> YMAX: " << ymax << "  XMAX: " << xmax << endl;
+
+				cout << "\n\n" << endl;
+
+				m = ymax / xmax;
+				cout << "VALOR DE M : " << m << endl;
+
+				cout << "\n\n" << endl;
+
+				for (int i = 0; i < ymax; i++) {
+					for (int j = 0; j < i; j++) {
+						if (i < m) {
+							cout << "*";
+						}
+						else {
+							cout << "X";
+						}
+
+					}
+					cout << "" << endl;
+				}
+
+
+			}
+			else {
+				cout << "! ERROR DE DATOS !" << endl;
+			}
+
 			break;
 		case 3:
+			cout << "EJERCICIO (3)" << endl;
+			cout << "-----------------" << endl;
+			cout << "\n" << endl;
+
+			cout << "DATO Nº (1)" << endl;
+			cout << "--------------\n" << endl;
+
+			cout << "DIA : ";
+			cin >> dia1;
+			cout << "MES : ";
+			cin >> mes1;
+			cout << "AÑO : ";
+			cin >> ano1;
+
+			cout << "\n" << endl;
+			cout << "DATO Nº (2)" << endl;
+			cout << "--------------\n" << endl;
+
+			cout << "DIA : ";
+			cin >> dia2;
+			cout << "MES : ";
+			cin >> mes2;
+			cout << "AÑO : ";
+			cin >> ano2;
+
+			cout << "\n\n" << endl;
+
+			if (ano1 > 2000 & ano2 > 2000) {
+				cout << "! DATOS CORRECTOS !" << endl;
+
+				cout << "\n\n" << endl;
+
+				cout << "     DATOS" << endl;
+				cout << "--------------\n" << endl;
+
+
+				if (ano1 > ano2) {
+					diferencia = (ano1 - ano2);
+				}
+				else {
+					diferencia = (ano2 - ano1);
+				}
+
+				cout << "DIFERENCIA : " << diferencia << " AÑOS " << endl;
+				dias = (diferencia * 360);
+				cout << "DIAS : " << dias << " DIAS " << endl;
+
+				cout << "\n\n" << endl;
+				r = (dias - ((12 - mes1) * 30)) - 2;
+				cout << "--------------------------------------" << endl;
+				cout << "RESULTADO DIAS : " << r << endl;
+				cout << "--------------------------------------" << endl;
+
+
+			}
+			else {
+				cout << "! ERROR DE DATOS !" << endl;
+			}
 			break;
 		case 4:
+			cout << "SALIENDO...." << endl;
 			break;
 		default:
-			cout << "! OPCION INCORRECTO !";
-				break;
+			cout << "! OPCION INCORRECTO !" << endl;
+			break;
 		}
 
 		cout << "\n\n" << endl;
@@ -149,4 +252,7 @@ int main(int argc, char** argv)
 	system("PAUSE");
 	return 0;
 }
+
+
+
 
